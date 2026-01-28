@@ -6,7 +6,7 @@ VAJRA-X is an AI-Defined Soldier System (ADSS) designed for elite infantry in co
 
 ## 🚀 Tactical Modules & Prototype Features
 
-* ** 🛰️ NAV:** Neural Navigation (PNT-Assurance)
+* **🛰️ NAV:** Neural Navigation (PNT-Assurance)
   
  * VBN Mode: Actively replaces GPS with Vision-Based Navigation using monocular RGB terrain matching when signals are compromised.
  * Signal Jamming Resilience: The UI autonomously shifts to a high-contrast wireframe mode during GNSS loss to ensure mission continuity.
