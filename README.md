@@ -1,5 +1,7 @@
 # 🛡️ VAJRA-X | Integrated Tactical Edge Intelligence
 
+## DEPLOYMENT LINK : https://vajra-x-tactical-interface.vercel.app
+
 VAJRA-X is an AI-Defined Soldier System (ADSS) designed for elite infantry in contested, GPS-denied, and network-silent environments. Built for Problem Statement 5, it provides real-time situational awareness and drone tracking entirely at the Tactical Edge.
 
 ---
@@ -38,6 +40,7 @@ VAJRA-X is an AI-Defined Soldier System (ADSS) designed for elite infantry in co
 * **Edge Intelligence:** Hundred Percentage  on-device processing; no cloud dependency, ensuring operation in "network-silent" zones.
 
 * **Trust & Safety:** Features an integrated Dead-Man's Switch for emergency data wipe and Ghost Mesh for encrypted peer-to-peer communication.
+
 
 ---
 
