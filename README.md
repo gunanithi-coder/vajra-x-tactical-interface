@@ -1,73 +1,29 @@
-# Welcome to your Lovable project
+🛡️ VAJRA-X | Integrated AI-Defined Soldier System (ISSAS)
+VAJRA-X is a military-grade Tactical Edge Intelligence layer designed for elite infantry in contested, GPS-denied, and network-silent environments. Developed for Problem Statement 5, it provides real-time drone tracking and autonomous situational awareness without cloud reliance.
 
-## Project info
+🚀 Core Intelligence Modules
+<details> <summary><b>🛰️ NAV: Neural Navigation (PNT-Assurance)</b></summary>
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
 
-## How can I edit this code?
+Solves <b>Problem Track 1 (Build for Failure)</b> by maintaining positioning when GNSS signals are jammed. <ul> <li><b>VBN Mode:</b> Vision-Based Navigation using monocular RGB feeds to match terrain wireframes against offline data.</li> <li><b>Dead Reckoning:</b> Integrated IMU fusion for inertial pathfinding in total signal blackout.</li> </ul> </details>
 
-There are several ways of editing your application.
+<details> <summary><b>🛸 INTEL: Sentinel Passive Defense</b></summary>
 
-**Use Lovable**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+Addresses <b>Problem Statement 5 (Intelligent Drone Perception)</b>. <ul> <li><b>Acoustic Fingerprinting:</b> CNN-based identification of UAV motor signatures (Mavic, FPV) via spectral analysis.</li> <li><b>Shot-Spotter:</b> 360-degree vectoring for gunshot triangulation using local mesh-net nodes.</li> <li><b>AI Reasoning Log:</b> Provides transparent justification for every detected threat to ensure long-term trust.</li> </ul> </details>
 
-Changes made via Lovable will be committed automatically to this repo.
+<details> <summary><b>🧠 COG-NET: Decisive UI Agent</b></summary>
 
-**Use your preferred IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Aligned with <b>Problem Track 2 (Human + Machine Decision Systems)</b>. <ul> <li><b>Stress-Responsive HUD:</b> Monitored via rPPG biometrics; autonomously simplifies the UI during high-stress spikes (>140bpm) to prevent "Panic Blindness".</li> <li><b>Ghost Mesh:</b> Decentralized peer-to-peer tactical mesh ensuring secure data integrity.</li> </ul> </details>
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+<details> <summary><b>🏥 BIO: Predictive Medical Triage</b></summary>
 
-Follow these steps:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+A proactive approach to soldier health in extreme environments. <ul> <li><b>rPPG Scanning:</b> Non-contact vital sign monitoring (HR, SpO2) via real-time camera analysis.</li> <li><b>HAPE Risk Prediction:</b> Predictive analytics that convert raw sensor signals into actionable health alerts for high-altitude operations.</li> </ul> </details>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+🛠️ Technical Implementation
+<details> <summary><b>View Stack & Deployment</b></summary>
 
-# Step 3: Install the necessary dependencies.
-npm i
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+<ul> <li><b>Frontend:</b> React, Tailwind CSS, Framer Motion (Zero-latency tactical transitions).</li> <li><b>Engine:</b> Three.js for interactive 3D terrain visualization.</li> <li><b>Edge Logic:</b> 100% on-device processing via Edge-optimized Vercel deployment.</li> <li>
