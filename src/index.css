@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* VAJRA-X Military Tactical Design System */
+
+@layer base {
+  :root {
+    /* Core Stealth Theme */
+    --background: 0 0% 0%;
+    --foreground: 43 100% 50%;
+
+    /* Tactical Amber - Primary */
+    --primary: 43 100% 50%;
+    --primary-foreground: 0 0% 0%;
+    --primary-glow: 43 100% 60%;
+
+    /* Secondary - Muted Amber */
+    --secondary: 43 50% 15%;
+    --secondary-foreground: 43 100% 50%;
+
+    /* Surface Colors */
+    --card: 0 0% 3%;
+    --card-foreground: 43 100% 50%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 43 100% 50%;
+
+    /* Muted - Low visibility elements */
+    --muted: 0 0% 8%;
+    --muted-foreground: 43 40% 40%;
+
+    /* Accent - Brighter tactical amber */
+    --accent: 43 100% 25%;
+    --accent-foreground: 43 100% 70%;
+
+    /* Alert States */
+    --destructive: 0 100% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --warning: 30 100% 50%;
+    --success: 120 60% 40%;
+
+    /* Borders & Input */
+    --border: 43 50% 20%;
+    --input: 43 30% 15%;
+    --ring: 43 100% 50%;
+
+    --radius: 0px;
+
+    /* Stealth Red Mode */
+    --stealth-background: 0 0% 0%;
+    --stealth-foreground: 0 100% 40%;
+    --stealth-primary: 0 100% 35%;
+    --stealth-glow: 0 100% 50%;
+
+    /* HUD Glow Effects */
+    --glow-amber: 0 0 20px hsl(43 100% 50% / 0.3);
+    --glow-amber-strong: 0 0 30px hsl(43 100% 50% / 0.5);
+    --glow-red: 0 0 20px hsl(0 100% 50% / 0.4);
+    --glow-green: 0 0 15px hsl(120 100% 40% / 0.3);
+
+    /* Sidebar - tactical style */
+    --sidebar-background: 0 0% 2%;
+    --sidebar-foreground: 43 100% 50%;
+    --sidebar-primary: 43 100% 50%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 43 100% 20%;
+    --sidebar-accent-foreground: 43 100% 60%;
+    --sidebar-border: 43 50% 15%;
+    --sidebar-ring: 43 100% 50%;
+  }
+
+  /* High-Stress Mode - Strips to extraction essentials */
+  .high-stress-mode {
+    --foreground: 0 100% 60%;
+    --primary: 0 100% 50%;
+    --primary-glow: 0 100% 70%;
+    --border: 0 80% 30%;
+  }
+
+  /* Stealth Mode - Deep Red */
+  .stealth-mode {
+    --foreground: 0 100% 35%;
+    --primary: 0 100% 30%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 50% 10%;
+    --secondary-foreground: 0 100% 40%;
+    --muted-foreground: 0 40% 25%;
+    --border: 0 60% 15%;
+    --accent: 0 80% 20%;
+    --accent-foreground: 0 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* CRT Scanline Effect */
+  .crt-overlay {
+    pointer-events: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.03) 0px,
+      rgba(0, 0, 0, 0.03) 1px,
+      transparent 1px,
+      transparent 2px
+    );
+    animation: scanline 8s linear infinite;
+  }
+
+  @keyframes scanline {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 100vh; }
+  }
+
+  /* Glowing border utility */
+  .glow-border {
+    border: 1px solid hsl(var(--primary));
+    box-shadow: var(--glow-amber), inset 0 0 10px hsl(43 100% 50% / 0.05);
+  }
+
+  .glow-border-red {
+    border: 1px solid hsl(var(--destructive));
+    box-shadow: var(--glow-red), inset 0 0 10px hsl(0 100% 50% / 0.1);
+  }
+
+  .glow-text {
+    text-shadow: 0 0 10px hsl(var(--primary) / 0.7), 0 0 20px hsl(var(--primary) / 0.4);
+  }
+
+  .glow-text-red {
+    text-shadow: 0 0 10px hsl(0 100% 50% / 0.8), 0 0 20px hsl(0 100% 50% / 0.5);
+  }
+
+  /* Glass morphism panels */
+  .glass-panel {
+    background: linear-gradient(
+      135deg,
+      hsl(0 0% 5% / 0.9) 0%,
+      hsl(0 0% 2% / 0.95) 100%
+    );
+    backdrop-filter: blur(10px);
+    border: 1px solid hsl(var(--border));
+  }
+
+  /* Tactical grid background */
+  .tactical-grid {
+    background-image: 
+      linear-gradient(hsl(43 100% 50% / 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(43 100% 50% / 0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  /* Pulsing animation for alerts */
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 1; box-shadow: var(--glow-amber); }
+    50% { opacity: 0.7; box-shadow: var(--glow-amber-strong); }
+  }
+
+  @keyframes pulse-red {
+    0%, 100% { opacity: 1; box-shadow: var(--glow-red); }
+    50% { opacity: 0.5; box-shadow: 0 0 40px hsl(0 100% 50% / 0.7); }
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .animate-pulse-red {
+    animation: pulse-red 0.5s ease-in-out infinite;
+  }
+
+  /* Radar sweep animation */
+  @keyframes radar-sweep {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .animate-radar-sweep {
+    animation: radar-sweep 4s linear infinite;
+  }
+
+  /* Flicker effect for alerts */
+  @keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+    75% { opacity: 0.9; }
+    25% { opacity: 0.7; }
+  }
+
+  .animate-flicker {
+    animation: flicker 0.15s ease-in-out infinite;
+  }
+
+  /* Data stream animation */
+  @keyframes data-stream {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+  }
+
+  /* Tab styling */
+  .tactical-tab {
+    @apply relative px-4 py-2 text-xs uppercase tracking-widest transition-all duration-200;
+    @apply border border-transparent hover:border-primary/50;
+  }
+
+  .tactical-tab.active {
+    @apply border-primary bg-primary/10 glow-border;
+  }
+
+  /* Progress bars */
+  .tactical-progress {
+    @apply h-2 bg-muted overflow-hidden;
+  }
+
+  .tactical-progress-bar {
+    @apply h-full bg-primary transition-all duration-300;
+    box-shadow: 0 0 10px hsl(var(--primary) / 0.5);
+  }
+}
+
+@layer components {
+  .btn-tactical {
+    @apply px-4 py-2 text-xs uppercase tracking-widest font-medium;
+    @apply border border-primary bg-primary/10 text-primary;
+    @apply hover:bg-primary/20 active:bg-primary/30;
+    @apply transition-all duration-150;
+    box-shadow: var(--glow-amber);
+  }
+
+  .btn-tactical:hover {
+    box-shadow: var(--glow-amber-strong);
+  }
+
+  .btn-danger {
+    @apply px-4 py-2 text-xs uppercase tracking-widest font-medium;
+    @apply border border-destructive bg-destructive/10 text-destructive;
+    @apply hover:bg-destructive/20 active:bg-destructive/30;
+    box-shadow: var(--glow-red);
+  }
+
+  .card-tactical {
+    @apply glass-panel p-4;
+  }
+
+  .stat-value {
+    @apply text-2xl font-bold glow-text tabular-nums;
+  }
+
+  .stat-label {
+    @apply text-[10px] uppercase tracking-widest text-muted-foreground;
+  }
+
+  .alert-critical {
+    @apply border-destructive bg-destructive/10 text-destructive glow-border-red animate-pulse-red;
+  }
+}
