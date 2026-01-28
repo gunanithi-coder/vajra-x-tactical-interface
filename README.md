@@ -6,25 +6,25 @@ VAJRA-X is an AI-Defined Soldier System (ADSS) designed for elite infantry in co
 
 ## 🚀 Tactical Modules & Prototype Features
 
-* **🛰️ NAV:** Neural Navigation (PNT-Assurance)
+## 🛰️ NAV: Neural Navigation (PNT-Assurance)
   
  * VBN Mode: Actively replaces GPS with Vision-Based Navigation using monocular RGB terrain matching when signals are compromised.
  * Signal Jamming Resilience: The UI autonomously shifts to a high-contrast wireframe mode during GNSS loss to ensure mission continuity.
  * Dead Reckoning: Integrated IMU support for pathfinding during total visual or signal blackout.
 
-* **🛸 INTEL:** Sentinel Passive Defense
+## 🛸 INTEL:Sentinel Passive Defense
   
  * Neural Drone Detection: Real-time classification of UAV signatures (Fixed-Wing ISR, Mavic-3 Pro, Custom FPV) using acoustic spectral analysis.
  * AI Reasoning Log: Provides transparent, real-time justification for every detected contact to build operator trust in AI decisions.
  * Acoustic Shot-Spotter: 360-degree vectoring for gunshot triangulation using decentralized local mesh nodes.
 
-* **🧠 COG-NET:** Decisive UI Agent
+## 🧠 COG-NET: Decisive UI Agent
   
  * High Stress Detection: The HUD autonomously triggers a "Simplified Mode" when biological sensors detect heart rate or stress spikes exceeding safety thresholds.
  * Cognitive Load Management: Strips away non-essential data during high-stress encounters to focus on navigation and objective survival.
  * Stealth Protocol: A system-wide shift to Deep Red (#8B0000) spectrum to preserve night vision and minimize light signatures.
 
-* **🏥 BIO:* ** Predictive Triage HUD
+## 🏥 BIO: Predictive Triage HUD
   
  * rPPG Camera Scan: Non-contact, real-time vital sign monitoring (HR, SpO2) via monocular camera analysis.
  * Medical Failure Prediction: Early warning indicators for High Altitude Pulmonary Edema (HAPE) risk based on biometric trends.
